@@ -33,7 +33,7 @@ public class ExpenseServiceImpl implements ExpenseService {
 		//return expense;
 		
 		//Correct Code
-		//return expenseRepository.save(expense);
+		return expenseRepository.save(expense);
 	}
 
 	public List<Expense> getExpense() {
@@ -57,8 +57,8 @@ public class ExpenseServiceImpl implements ExpenseService {
 		//log.info("Debug delete");
 		
 		//Correct Code
-		//expenseRepository.deleteById(expenseId);
-		//expenseRepository.flush();
+		expenseRepository.deleteById(expenseId);
+		expenseRepository.flush();
 	}
 
 }
